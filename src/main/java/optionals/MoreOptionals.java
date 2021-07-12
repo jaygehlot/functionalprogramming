@@ -16,7 +16,7 @@ public class MoreOptionals {
 
         System.out.println("=====================");
 
-        someNameOpt.ifPresentOrElse(name -> System.out.println("Hey" + name),
+        emptyOpt.ifPresentOrElse(name -> System.out.println("Hey" + name),
                 () -> System.out.println("Hi"));
 
 

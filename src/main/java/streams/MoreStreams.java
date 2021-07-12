@@ -7,6 +7,11 @@ import java.util.stream.Stream;
 
 public class MoreStreams {
 
+    /**
+     * Declarative code design
+     *
+     */
+
     public static void main(String[] args) {
 
         //Stream is nothing but a sequence of items
@@ -25,7 +30,6 @@ public class MoreStreams {
         Stream<String> fruity = someMoreFruits.stream();
 
         fruity.forEach(System.out::println);
-        //someMoreFruits.parallelStream().forEach(System.out::println);
 
         //Match
         System.out.println(fruits.anyMatch(item-> item.contains("avocados")));

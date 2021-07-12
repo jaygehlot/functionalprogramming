@@ -9,13 +9,13 @@ public class SwitchStatements {
     public static void main(String[] args) {
         oldStyleSwitch();
         newStyle();
-        switchWithEnums();
+        switchWithEnums(Season.SUMMER);
     }
 
-    private static void switchWithEnums() {
-        String season = switch(Season.AUTUMN) {
-            case SPRING -> "Sunny";
-            case SUMMER -> "Hot";
+
+    private static void switchWithEnums(final Season selectedSeason) {
+        String season = switch(selectedSeason) {
+            case SPRING, SUMMER -> "Sunny";
             case AUTUMN -> "Blustery";
             case WINTER -> "Cold";
             default ->"Invalid season";
@@ -31,7 +31,7 @@ public class SwitchStatements {
             case 2 -> "Summer";
             case 3 -> "Autumn";
             case 4 -> "Winter";
-            default ->"Invalid season";
+            default ->"Invalid season"; //default case is needed otherwise code will not compile
         };
         System.out.println(season);
     }
