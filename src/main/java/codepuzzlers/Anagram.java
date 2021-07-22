@@ -1,4 +1,4 @@
-package anagrams;
+package codepuzzlers;
 
 import java.util.Arrays;
 
